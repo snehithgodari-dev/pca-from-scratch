@@ -10,11 +10,11 @@ and applies it to an embedding-reduction task with real measured results.
 
  Check                                                                                   Result 
 
- Match vs. `sklearn.decomposition.PCA` (sign-aligned)                   max abs diff `< 1e-10` (machine precision) 
+ Match vs. `sklearn.decomposition.PCA` (sign-aligned) |                  max abs diff `< 1e-10` (machine precision) 
  Embedding reduction                                                     128-dim → 12-dim, **86.3%** variance retained 
- Clustering quality (silhouette score)                                   0.607 → 0.864(improved — noise dims removed) 
- Inference throughput (20,000 queries, cluster assignment)               ~4–5x faster on reduced representation 
- Core implementation size                                                19 lines of NumPy (`fit` + `transform`) 
+ Clustering quality (silhouette score) |                                  0.607 → 0.864(improved — noise dims removed) 
+ Inference throughput (20,000 queries, cluster assignment)    |           ~4–5x faster on reduced representation 
+ Core implementation size        |                                        19 lines of NumPy (`fit` + `transform`) 
 
 Exact numbers vary slightly run-to-run due to `KMeans` random initialization 
 see the notebooks for the live values from the latest run.
